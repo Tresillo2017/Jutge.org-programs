@@ -1,9 +1,16 @@
 #include <iostream>
 using namespace std;
 int main() {
-    string a, b, d, r;
+    int a, b;
+    b > 0;
     cin >> a >> b;
-    d = a/b;
-    r = a%b;
+    int d = a/b;
+    int r = a%b;
+    if (r < 0)
+    {
+        d = d-1;
+        int s = d*b;
+        r = -s+a;
+    }
     cout << d << " " << r << endl;
 }
