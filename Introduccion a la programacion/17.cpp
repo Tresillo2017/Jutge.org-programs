@@ -6,21 +6,16 @@ int main()
 	int a1,b1,a2,b2,inf,sup;
     cin >> a1 >> b1 >> a2 >> b2;
 
-    if (b1 == a2 && b2 == a1) // Caso 1
+    if (b1 < a2 || b2 < a1) // Caso 1
     {
-        cout << "=" << endl; 
-    }
-    else if (a1 < a2 && b1 > b2)
-    {
-        cout << "2" << endl;
-    }
-    else if(a2 < a1 && b1 < b2)
-    {
-        cout << "1" << endl;
+        cout << "[]" << endl; 
     }
     else
     {
-        cout << "?" << endl;
+        inf = a1;
+        if(a2>a1) inf = a2;
+        sup = b1;
+        if(b2<b1) sup = b2; 
+        cout << "[" << inf << "," << sup << "]" << endl;
     }
-    
 }
